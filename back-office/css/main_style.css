@@ -1,0 +1,155 @@
+/* ------------ Inicio Estilos Generales ---------- */
+*{
+    list-style: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: Roboto, calibri, arial, sans-serif;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+/* ------------ Estilos Cabecera ---------- */
+#contenedor{
+    margin: 0 auto;
+}
+#cabecera{
+    background: #3E9393;
+    color: white;
+    padding: .5em;
+}
+/* ------------ Estilos Menu Navegacion ---------- */
+#cabecera a{
+    color: white;
+}
+li[id*="menutab"] > a{
+    color: white;
+    cursor: default;
+}
+#menu_bar{
+    background: #3b6363;
+}
+#menu_bar li a{
+    display: block;
+    padding: .5em;
+}
+#main_menu > li{
+    border-right: white 1px solid;
+    display: inline-block;
+    position: relative;
+}
+.nav_on{
+    background: #3E9393;
+}
+.sub_menu{
+    box-shadow: 2px 2px 10px #aaa;
+    display: none;
+    font-size: .9em;
+    position: absolute;
+    min-width: 150px;
+}
+.sub_menu a{
+    background: white;
+    border: 1px solid lightgray;
+}
+#menutab1:hover > .sub_menu,
+#menutab2:hover > .sub_menu,
+#menutab3:hover > .sub_menu,
+#menutab4:hover > .sub_menu{
+    display: block;
+}
+#main_menu > li:hover, #main_menu > li > a:hover{
+    background: #3E9393;
+    color: white;
+}
+.sub_menu > li > a:hover{
+    background: #dfdfdf;
+}
+/* ------------ Estilos Migas de Pan ---------- */
+#migas{
+    background: gray;
+    overflow: hidden;
+}
+#migas > a{
+    background: gray;
+    color: white;
+    display: inline-block;
+    padding: 10px;
+    float: right;
+}
+#migas > a:hover{
+    background: black;
+}
+#migas > h2{
+    background: white;
+    padding: 10px 20px;
+}
+#migas > h2 > a:hover{
+    color: red;
+}
+/* ------------ Estilos Tabla de Contenidos ---------- */
+#conten_produccion{
+    width: 100%;
+}
+#conten_produccion th,
+#conten_produccion td{
+    padding: 2px 5px;
+}
+#conten_produccion input{
+    display: block;
+    width: 95%;
+}
+.s{
+    width: 4%;
+}
+.m{
+    width: 11%;
+}
+.l{
+    width: 22%;
+}
+/* ------------ Estilos Info Aside ---------- */
+#info_aside{
+    background: darkgray;
+    float: left;
+    width: 15%;
+}
+#info_aside li{
+    border-bottom: 1px solid gray;
+}
+#info_aside li a{
+    color: white;
+    display: block;
+    padding: .2em .8em;
+}
+#info_aside li a:hover, .step_on{
+    background: #ded;
+    color: black !important;
+}
+/* ------------ Estilos Info Block ---------- */
+#info_block{
+    background: #ded;
+    float: right;
+    width: 85%;
+}
+div[id*="step"]{
+    height: 400px;
+    padding: 1em;
+}
+div[id*="step"] h2{
+    border-bottom: 1px solid gray;
+    margin-bottom: 1em;
+}
+#step2, #step3, #step4, #step5, #step6{display: none}
+/* ------------ Estilos Footer ---------- */
+#footer{
+    border-top: 1px solid darkgray;
+    bottom: 0;
+    padding: 1em;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+}
