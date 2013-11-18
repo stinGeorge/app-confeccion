@@ -8,7 +8,14 @@ include_once($raiz.'lib/header.php');
 	<h2>
 		<a href="<?php echo $raiz; ?>">Home</a> > <a href="produccion.php">Lista de producción</a> > <?php echo $title; ?>
 	</h2>
-	<a href="produccion.php">Volver a la lista</a>
+	<ul>
+		<li><a href="produccion.php">Volver a la lista</a></li><li>
+		<a href="#" onclick="window.document.forms.form_prod.submit();">Guardar</a></li><li>
+		<a href="produccion.php">Guardar y continuar</a></li><li>
+		<a href="produccion.php">Duplicar</a></li><li>
+		<a href="produccion.php">Reiniciar</a></li><li>
+		<a href="produccion.php">Eliminar</a></li>
+	</ul>
 </section>
 <aside id="info_aside">
 	<ul>
@@ -17,34 +24,39 @@ include_once($raiz.'lib/header.php');
 		<li><a id="prod3" href="#">Tiempos</a></li>
 		<li><a id="prod4" href="#">Indicaciones</a></li>
 		<li><a id="prod5" href="#">Accesorios</a></li>
-		<li><a id="prod6" href="#">Imágenes</a></li>
+		<li><a id="prod6" href="#">Categrías</a></li>
+		<li><a id="prod7" href="#">Imágenes</a></li>
 	</ul>
 </aside>
 <section id="info_block">
-	<form accept="form_produccion.php" method="post">
+	<form id="form_prod" action="proces_prod.php" method="post">
 		<div id="step1">
 			<h2>Información general de producción</h2>
 			<table summary="Informacion general de produccion">
 				<tbody>
 					<tr>
-						<td><label for="orden">Orden: </label></td>
-						<td><input name="orden" id="orden" type="text"></td>
+						<td><label for="cod_prenda">Código: </label></td>
+						<td><input name="cod_prenda" id="cod_prenda" type="text"></td>
 					</tr>
 					<tr>
-						<td><label for="articulo">Artículo: </label></td>
-						<td><input name="articulo" id="articulo" type="text"></td>
+						<td><label for="num_orden">Número de orden: </label></td>
+						<td><input name="num_orden" id="num_orden" type="text"></td>
+					</tr>
+					<tr>
+						<td><label for="nomb_prenda">Nombre de la prenda: </label></td>
+						<td><input name="nomb_prenda" id="nomb_prenda" type="text"></td>
 					</tr>
 					<tr>
 						<td><label for="empresa">Empresa: </label></td>
 						<td><input name="empresa" id="empresa" type="text"></td>
 					</tr>
 					<tr>
-						<td><label for="modelo">Modelo: </label></td>
-						<td><input name="modelo" id="modelo" type="text"></td>
+						<td><label for="cliente">Cliente: </label></td>
+						<td><input name="cliente" id="cliente" type="text"></td>
 					</tr>
 					<tr>
-						<td><label for="categoria">Categoría: </label></td>
-						<td><input name="categoria" id="categoria" type="text"></td>
+						<td><label for="modelo">Modelo: </label></td>
+						<td><input name="modelo" id="modelo" type="text"></td>
 					</tr>
 					<tr>
 						<td><label for="tela">Tela: </label></td>
@@ -58,6 +70,10 @@ include_once($raiz.'lib/header.php');
 						<td><label for="color">Color: </label></td>
 						<td><input name="color" id="color" type="color"></td>
 					</tr>
+					<tr>
+						<td><label for="estado">Estado: </label></td>
+						<td><input name="estado" id="estado" type="text"></td>
+					</tr>
 				</tbody>
 			</table>
 		</div>
@@ -66,24 +82,24 @@ include_once($raiz.'lib/header.php');
 			<table summary="Informacion sobre cantidades y tallas">
 				<tbody>
 					<tr>
-						<td><label for="cantidad">Cantidad: </label></td>
+						<td><label for="cantidad">Cantidad total: </label></td>
 						<td><input name="cantidad" id="cantidad" type="number"></td>
 					</tr>
 					<tr>
-						<td><label for="grupo1">Grupo 1: </label></td>
-						<td><input name="grupo1" id="grupo1" type="text"></td>
+						<td><label for="Talla1">Talla 1: </label></td>
+						<td><input name="Talla1" id="Talla1" type="text"></td>
 					</tr>
 					<tr>
-						<td><label for="grupo2">Grupo 2: </label></td>
-						<td><input name="grupo2" id="grupo2" type="text"></td>
+						<td><label for="Talla2">Talla 2: </label></td>
+						<td><input name="Talla2" id="Talla2" type="text"></td>
 					</tr>
 					<tr>
-						<td><label for="grupo3">Grupo 3: </label></td>
-						<td><input name="grupo3" id="grupo3" type="text"></td>
+						<td><label for="Talla3">Talla 3: </label></td>
+						<td><input name="Talla3" id="Talla3" type="text"></td>
 					</tr>
 					<tr>
-						<td><label for="grupo4">Grupo 4: </label></td>
-						<td><input name="grupo4" id="grupo4" type="text"></td>
+						<td><label for="Talla4">Talla 4: </label></td>
+						<td><input name="Talla4" id="Talla4" type="text"></td>
 					</tr>
 				</tbody>
 			</table>
@@ -95,6 +111,10 @@ include_once($raiz.'lib/header.php');
 					<tr>
 						<td><label for="fecha_ingreso">Fecha de ingreso: </label></td>
 						<td><input name="fecha_ingreso" id="fecha_ingreso" type="date"></td>
+					</tr>
+					<tr>
+						<td><label for="fecha_inicio">Fecha de inicio: </label></td>
+						<td><input name="fecha_inicio" id="fecha_inicio" type="date"></td>
 					</tr>
 					<tr>
 						<td><label for="fecha_entrega">Fecha de entrega: </label></td>
@@ -138,6 +158,17 @@ include_once($raiz.'lib/header.php');
 			</table>
 		</div>
 		<div id="step6">
+			<h2>Categorías</h2>
+			<table summary="Imágenes">
+				<tbody>
+					<tr>
+						<td><label for="categoria">Categoría: </label></td>
+						<td><input name="categoria" id="categoria" type="text"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div id="step7">
 			<h2>Imágenes</h2>
 			<table summary="Imágenes">
 				<tbody>

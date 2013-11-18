@@ -1,5 +1,5 @@
 <footer id="footer">
-	<h6>SgearH<br />Control de producción v1.0.0</h6>
+	<h6>SgearH - Control de producción versión 1.0.0.0</h6>
 </footer>
 </div>
 </body>
