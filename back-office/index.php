@@ -1,9 +1,8 @@
 <?php
-$raiz = "./";
 $tab = 0;
 $title = "Home";
-include_once('lib/header.php');
+include_once('/src_php/lib/header.php');
 ?>
 <?php
-include_once('lib/footer.php');
+include_once('/src_php/lib/footer.php');
 ?>

@@ -1,0 +1,220 @@
+/* ------------ Inicio Estilos Generales ---------- */
+*{
+    list-style: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+}
+body, html{
+    font-family: Roboto, calibri, arial, sans-serif;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+/* ------------ Estilos Cabecera ---------- */
+#contenedor{
+    margin: 0 auto;
+}
+#cabecera{
+    background: #3E9393;
+    color: white;
+    padding: .5em;
+}
+/* ------------ Estilos Menu Navegacion ---------- */
+#cabecera a{
+    color: white;
+}
+li[id*="menutab"] > a{
+    color: white;
+    cursor: default;
+}
+#menu_bar{
+    background: #3b6363;
+}
+#menu_bar li a{
+    display: block;
+    padding: .5em;
+}
+#main_menu > li{
+    border-right: white 1px solid;
+    display: inline-block;
+}
+.nav_on{
+    background: #3E9393;
+}
+.sub_menu{
+    box-shadow: 2px 2px 10px #aaa;
+    display: none;
+    font-size: .8em;
+    position: absolute;
+    min-width: 150px;
+}
+.sub_menu a{
+    background: white;
+    border: 1px solid lightgray;
+}
+#menutab1:hover > .sub_menu,
+#menutab2:hover > .sub_menu,
+#menutab3:hover > .sub_menu,
+#menutab4:hover > .sub_menu{
+    display: block;
+    z-index: 100;
+}
+#main_menu > li:hover, #main_menu > li > a:hover{
+    background: #3E9393;
+    color: white;
+}
+.sub_menu > li > a:hover{
+    background: #dfdfdf;
+}
+/* ------------ Estilos Migas de Pan ---------- */
+#migas{
+    background: gray;
+    overflow: hidden;
+}
+#migas > a{
+    background: gray;
+    color: white;
+    display: inline-block;
+    padding: 10px;
+    float: right;
+}
+#migas > a:hover{
+    background: black;
+}
+#migas ul{
+    float: right;
+}
+#migas li{
+    display: inline-block;
+}
+#migas li a{
+    color: white;
+    display: block;
+    padding: 10px;
+}
+#migas li a:hover{
+    background: white;
+    color: gray;
+    display: block;
+}
+#migas > h2{
+    background: white;
+    font-size: 1em;
+    font-weight: normal;
+    padding: 10px 20px;
+}
+#migas > h2 > a:hover{
+    color: red;
+}
+/* ------------ Estilos Tabla de Contenidos ---------- */
+#conten_produccion{
+    width: 100%;
+}
+#conten_produccion th,
+#conten_produccion td{
+    padding: 2px 5px;
+}
+#conten_produccion input{
+    display: block;
+    width: 95%;
+}
+.s{
+    width: 4%;
+}
+.m{
+    width: 11%;
+}
+.l{
+    width: 22%;
+}
+/* ------------ Estilos Info Aside ---------- */
+#info_aside{
+    background: darkgray;
+    float: left;
+    width: 15%;
+}
+#info_aside li{
+    border-bottom: 1px solid gray;
+}
+#info_aside li a{
+    color: white;
+    display: block;
+    padding: .2em .8em;
+}
+#info_aside li a:hover, .step_on{
+    background: #ded;
+    color: black !important;
+}
+/* ------------ Estilos Info Block ---------- */
+#info_block{
+    background: #ded;
+    box-sizing: border-box;
+    float: right;
+    height: 100%;
+    padding: 0 20px;
+    width: 85%;
+}
+#info_block table{
+    width: 100%;
+}
+div[id*="step"]{
+    padding: 1em;
+}
+#step2, #step3, #step4, #step5, #step6, #step7, #step8{display: none}
+#info_block tr td{
+    padding: 3px 0;
+    vertical-align: top;
+}
+#info_block tr td:first-child{
+    width: 20%;
+}
+#info_block tr td:nth-child(2n) input[type="text"],
+#info_block tr td:nth-child(2n) textarea{
+    width: 100%;
+}#info_block tr td:nth-child(2n) textarea{
+    height: 100px;
+    resize: none;
+}
+div[id*="step"] h2{
+    border-bottom: 1px solid gray;
+    margin-bottom: 1em;
+}
+/* ------------ Estilos categoríias ---------- */
+#categorias li, .folder, .start-line, .end-line{
+    padding: 0 0 0 25px;
+    margin: 0;
+}
+.folder{
+    background: url(../img/folder5.png) 0 0 no-repeat;
+    background-size: 20px 20px;
+}
+.start-line{
+    background: url(../img/start-line.gif) 0 0 no-repeat;
+}
+.end-line{
+    background: url(../img/end-line.gif) 0 0 no-repeat;
+}
+/* ------------ Estilos Footer ---------- */
+#footer{
+    background: #3b6363;
+    border-top: 1px solid darkgray;
+    bottom: 0;
+    color: white;
+    padding: 1em;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+}
+/* ------------ Estilos de clases e ids generales ---------- */
+.boton{
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#33c4ba), color-stop(100%,#006c82)); /* Chrome,Safari4+ */
+    color: white;
+    font-size: .8em;
+    padding: 5px 10px;
+}
+.boton:hover{
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4edbe0), color-stop(100%,#006c82)); /* Chrome,Safari4+ */
+    cursor: pointer;
+}
